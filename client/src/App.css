@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+
+.app {
+  background-color: #f1f5f9;
+  color: #111827;
+  min-height: 100vh;
+  transition: 0.3s ease;
+}
+
+.app.dark {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #35405e;
+  color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-left, .nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.profile-button {
+  background: transparent;
+  color: #fff;
+  font-weight: 500;
+}
+
+.logout-button, .login-button, .signup-button {
+  background-color: white;
+  color: #1e40af;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.logout-button:hover,
+.login-button:hover,
+.signup-button:hover {
+  background-color: #e0e7ff;
+}
+
+.theme-toggle {
+  background-color: #2f3034;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  background-color: #1d4ed8;
+}
+
+
+
+.dashboard-container {
+  padding: 2rem;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.section-heading {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.5rem;
+  border-bottom: 2px solid #94a3b8;
+  padding-bottom: 0.3rem;
+}
+
+.coin-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.coin-item {
+  border: 1px solid gray;
+  border-radius: 8px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: #e2e8f0;
+  color: #1e293b;
+  transition: 0.2s ease;
+}
+
+.coin-item:hover {
+  background: #cbd5e1;
+}
+
+.coin-item.active {
+  background: #93c5fd;
+  border: 2px solid #2563eb;
+}
+
+.app.dark .coin-item {
+  background: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.app.dark .coin-item.active {
+  background: #1e40af;
+  border-color: #60a5fa;
+}
+
+.chart-section {
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .nav-left,
+  .nav-right {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar {
+    padding: 1rem;
+  }
+
+  .coin-item {
+    width: 100%;
+  }
+}
